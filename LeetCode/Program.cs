@@ -23,6 +23,9 @@ namespace LeetCode
             bool result2 = ContainsDuplicates.ContainsDuplicate(ConvertToArray("7,1,5,3,6,4"));
             Console.WriteLine($"result={result2},expected=False");
 
+            int result4 = SingleNumber1.SingleNumber(ConvertToArray("4,1,2,1,2"));
+            Console.WriteLine($"result={result4},expected=4");
+
             Console.ReadLine();
         }
     }

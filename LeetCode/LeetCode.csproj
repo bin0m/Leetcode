@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Array\BestTimetoBuyandSellStockII.cs" />
     <Compile Include="Array\ContainsDuplicates.cs" />
+    <Compile Include="Array\SingleNumber1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
