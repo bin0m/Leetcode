@@ -26,6 +26,10 @@ namespace LeetCode
             int result4 = SingleNumber1.SingleNumber(ConvertToArray("4,1,2,1,2"));
             Console.WriteLine($"result={result4},expected=4");
 
+
+            int[] result5 = IntersectionOfTwoArraysII.Intersect(ConvertToArray("1,2,2,1"), ConvertToArray("2,2"));
+            Console.WriteLine($"result=[{String.Join(",",result5)}],expected=[2,2]");
+
             Console.ReadLine();
         }
     }
