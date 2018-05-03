@@ -30,6 +30,10 @@ namespace LeetCode
             int[] result5 = IntersectionOfTwoArraysII.Intersect(ConvertToArray("1,2,2,1"), ConvertToArray("2,2"));
             Console.WriteLine($"result=[{String.Join(",",result5)}],expected=[2,2]");
 
+            int[] result6 = PlusOne1.PlusOne(ConvertToArray("2,9"));
+            Console.WriteLine($"result=[{String.Join(",", result6)}],expected=[3,0]");
+
+
             Console.ReadLine();
         }
     }
