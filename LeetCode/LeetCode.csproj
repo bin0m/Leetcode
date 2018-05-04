@@ -45,6 +45,7 @@
     <Compile Include="Array\BestTimetoBuyandSellStockII.cs" />
     <Compile Include="Array\ContainsDuplicates.cs" />
     <Compile Include="Array\IntersectionOfTwoArraysII.cs" />
+    <Compile Include="Array\MoveZeroes1.cs" />
     <Compile Include="Array\PlusOne1.cs" />
     <Compile Include="Array\SingleNumber1.cs" />
     <Compile Include="Program.cs" />

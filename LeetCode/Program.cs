@@ -33,6 +33,9 @@ namespace LeetCode
             int[] result6 = PlusOne1.PlusOne(ConvertToArray("2,9"));
             Console.WriteLine($"result=[{String.Join(",", result6)}],expected=[3,0]");
 
+            int[] intArr1 = new int[] { 0, 1, 0, 3, 12 };
+            MoveZeroes1.MoveZeroes(intArr1);
+            Console.WriteLine($"result=[{String.Join(",", intArr1)}],expected=[1,3,12,0,0]");
 
             Console.ReadLine();
         }
