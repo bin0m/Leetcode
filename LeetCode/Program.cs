@@ -23,9 +23,10 @@ namespace LeetCode
             bool result2 = ContainsDuplicates.ContainsDuplicate(ConvertToArray("7,1,5,3,6,4"));
             Console.WriteLine($"result={result2},expected=False");
 
-            var numz = ConvertToArray("1,2,3,4,5,6");
-            RotateArray.Rotate(numz, 4);
-            Console.WriteLine(string.Join(",", numz));
+            var result3 = ConvertToArray("1,2,3,4,5,6");
+            RotateArray.Rotate(result3, 4);
+            Console.WriteLine(string.Join(",", result3));
+
             int result4 = SingleNumber1.SingleNumber(ConvertToArray("4,1,2,1,2"));
             Console.WriteLine($"result={result4},expected=4");
 
@@ -36,9 +37,9 @@ namespace LeetCode
             int[] result6 = PlusOne1.PlusOne(ConvertToArray("2,9"));
             Console.WriteLine($"result=[{String.Join(",", result6)}],expected=[3,0]");
 
-            int[] intArr1 = new int[] { 0, 1, 0, 3, 12 };
-            MoveZeroes1.MoveZeroes(intArr1);
-            Console.WriteLine($"result=[{String.Join(",", intArr1)}],expected=[1,3,12,0,0]");
+            int[] result7 = new int[] { 0, 1, 0, 3, 12 };
+            MoveZeroes1.MoveZeroes(result7);
+            Console.WriteLine($"result=[{String.Join(",", result7)}],expected=[1,3,12,0,0]");
 
             Console.ReadLine();
         }
