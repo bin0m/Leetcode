@@ -45,6 +45,12 @@ namespace LeetCode
            string result8 = ReverseString1.ReverseString("hello");
             Console.WriteLine($"result=[{result8}],expected=[olleh]");
 
+            //int result9 = ReverseInteger1.Reverse(1534236469);
+            //Console.WriteLine($"result=[{result9}],expected=[96]");
+
+            Console.WriteLine(Int32.MaxValue);
+            Console.WriteLine(-2147483648);
+
             Console.ReadLine();
         }
     }

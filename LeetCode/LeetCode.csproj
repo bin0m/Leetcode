@@ -51,6 +51,7 @@
     <Compile Include="Arrays\SingleNumber1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strings\ReverseInteger1.cs" />
     <Compile Include="Strings\ReverseString1.cs" />
   </ItemGroup>
   <ItemGroup>
