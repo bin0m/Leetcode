@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LeetCode.Arrays;
+using LeetCode.Strings;
 
 namespace LeetCode
 {
@@ -40,6 +41,9 @@ namespace LeetCode
             int[] result7 = new int[] { 0, 1, 0, 3, 12 };
             MoveZeroes1.MoveZeroes(result7);
             Console.WriteLine($"result=[{String.Join(",", result7)}],expected=[1,3,12,0,0]");
+
+           string result8 = ReverseString1.ReverseString("hello");
+            Console.WriteLine($"result=[{result8}],expected=[olleh]");
 
             Console.ReadLine();
         }
