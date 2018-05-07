@@ -42,18 +42,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Array\BestTimetoBuyandSellStockII.cs" />
-    <Compile Include="Array\ContainsDuplicates.cs" />
-    <Compile Include="Array\IntersectionOfTwoArraysII.cs" />
-    <Compile Include="Array\MoveZeroes1.cs" />
-    <Compile Include="Array\PlusOne1.cs" />
-    <Compile Include="Array\RotateArray.cs" />
-    <Compile Include="Array\SingleNumber1.cs" />
+    <Compile Include="Arrays\BestTimetoBuyandSellStockII.cs" />
+    <Compile Include="Arrays\ContainsDuplicates.cs" />
+    <Compile Include="Arrays\IntersectionOfTwoArraysII.cs" />
+    <Compile Include="Arrays\MoveZeroes1.cs" />
+    <Compile Include="Arrays\PlusOne1.cs" />
+    <Compile Include="Arrays\RotateArray.cs" />
+    <Compile Include="Arrays\SingleNumber1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Strings\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
