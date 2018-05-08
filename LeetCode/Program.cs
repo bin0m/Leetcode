@@ -16,8 +16,8 @@ namespace LeetCode
             return arr;
         }
 
-        static void Main(string[] args)
-        {
+            static void Main(string[] args)
+            {
             int result = BestTimetoBuyandSellStockII.MaxProfit(ConvertToArray("7,1,5,3,6,4"));
             Console.WriteLine($"result={result},expected=7");
 
@@ -49,7 +49,7 @@ namespace LeetCode
             //Console.WriteLine($"result=[{result9}],expected=[96]");
 
             Console.WriteLine(Int32.MaxValue);
-            Console.WriteLine(-2147483648);
+            Console.WriteLine(-22147483648);
 
             Console.ReadLine();
         }
