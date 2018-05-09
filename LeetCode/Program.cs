@@ -51,6 +51,9 @@ namespace LeetCode
             int result10 = FirstUniqueCharacterInAString.FirstUniqChar("abcdabb");
             Console.WriteLine($"result=[{result10}],expected=[2]");
 
+            bool result11 = ValidAnagram.IsAnagram("anagram", "nagaram");
+            Console.WriteLine($"result=[{result11}],expected=[True]");
+
             Console.ReadLine();
         }
     }

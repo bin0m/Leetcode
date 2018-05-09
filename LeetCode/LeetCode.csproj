@@ -54,6 +54,7 @@
     <Compile Include="Strings\FirstUniqueCharacterInAString.cs" />
     <Compile Include="Strings\ReverseInteger1.cs" />
     <Compile Include="Strings\ReverseString1.cs" />
+    <Compile Include="Strings\ValidAnagram.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
