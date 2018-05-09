@@ -55,6 +55,7 @@
     <Compile Include="Strings\ReverseInteger1.cs" />
     <Compile Include="Strings\ReverseString1.cs" />
     <Compile Include="Strings\ValidAnagram.cs" />
+    <Compile Include="Strings\ValidPalindrome.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

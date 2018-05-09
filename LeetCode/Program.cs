@@ -54,6 +54,9 @@ namespace LeetCode
             bool result11 = ValidAnagram.IsAnagram("anagram", "nagaram");
             Console.WriteLine($"result=[{result11}],expected=[True]");
 
+            bool result12 = ValidPalindrome.IsPalindrome("A man, a plan, a canal: Panama");
+            Console.WriteLine($"result=[{result12}],expected=[True]");
+
             Console.ReadLine();
         }
     }
