@@ -42,11 +42,14 @@ namespace LeetCode
             MoveZeroes1.MoveZeroes(result7);
             Console.WriteLine($"result=[{String.Join(",", result7)}],expected=[1,3,12,0,0]");
 
-           string result8 = ReverseString1.ReverseString("hello");
+            string result8 = ReverseString1.ReverseString("hello");
             Console.WriteLine($"result=[{result8}],expected=[olleh]");
 
             int result9 = ReverseInteger1.Reverse(-123456);
             Console.WriteLine($"result=[{result9}],expected=[-654321]");
+
+            int result10 = FirstUniqueCharacterInAString.FirstUniqChar("abcdabb");
+            Console.WriteLine($"result=[{result10}],expected=[2]");
 
             Console.ReadLine();
         }
