@@ -13,6 +13,10 @@ namespace LeetCode.Strings
             bool isNegative = false;
             if (x < 0)
             {
+                if (x == int.MinValue)
+                {
+                    return 0;
+                }
                 x = x * (-1);
                 isNegative = true;
             }
