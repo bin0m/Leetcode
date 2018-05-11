@@ -57,6 +57,9 @@ namespace LeetCode
             bool result12 = ValidPalindrome.IsPalindrome("A man, a plan, a canal: Panama");
             Console.WriteLine($"result=[{result12}],expected=[True]");
 
+            int result13 = StringToIntegerAtoi.MyAtoi("  -4193 with words");
+            Console.WriteLine($"result=[{result13}],expected=[-4193]");
+
             Console.ReadLine();
         }
     }
