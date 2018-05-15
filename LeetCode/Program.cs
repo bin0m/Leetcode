@@ -60,6 +60,9 @@ namespace LeetCode
             int result13 = StringToIntegerAtoi.MyAtoi("  -4193 with words");
             Console.WriteLine($"result=[{result13}],expected=[-4193]");
 
+            int[] result14 = TwoSum1.TwoSum(ConvertToArray("2,11,6,3"),14);
+            Console.WriteLine($"result =[{ String.Join(",", result14)}],expected =[1,3]");
+
             Console.ReadLine();
         }
     }

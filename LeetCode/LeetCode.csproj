@@ -49,6 +49,7 @@
     <Compile Include="Arrays\PlusOne1.cs" />
     <Compile Include="Arrays\RotateArray.cs" />
     <Compile Include="Arrays\SingleNumber1.cs" />
+    <Compile Include="Arrays\TwoSum1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Strings\FirstUniqueCharacterInAString.cs" />
