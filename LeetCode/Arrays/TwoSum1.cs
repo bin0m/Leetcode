@@ -18,17 +18,32 @@ namespace LeetCode.Arrays
             int[] ans = new int[2];
 
             //Naive solution: Brute force O(N^2)
+            //for (int i = 0; i < size; i++)
+            //{
+            //    for (int j = i + 1; j < size; j++)
+            //    {
+            //        if (nums[i] + nums[j] == target)
+            //        {
+            //            ans[0] = i;
+            //            ans[1] = j;
+            //            return ans;
+            //        }
+            //    }
+            //}
+            //return ans;
+
+
+            // Time efficient solution (using hash)
+            var dict = new Dictionary<int, int>();
             for (int i = 0; i < size; i++)
             {
-                for (int j = i + 1; j < size; j++)
+                if (dict.ContainsKey(target - nums[i]))
                 {
-                    if (nums[i] + nums[j] == target)
-                    {
-                        ans[0] = i;
-                        ans[1] = j;
-                        return ans;
-                    }
+                    ans[0] = dict[target - nums[i]];
+                    ans[1] = i;
+                    return ans;
                 }
+                dict[nums[i]] = i;
             }
             return ans;
         }
