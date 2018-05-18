@@ -63,6 +63,9 @@ namespace LeetCode
             int[] result14 = TwoSum1.TwoSum(ConvertToArray("2,11,6,3"),14);
             Console.WriteLine($"result =[{ String.Join(",", result14)}],expected =[1,3]");
 
+            string result15 = LongestCommonPrefix1.LongestCommonPrefix(new string[] { "flower", "flow", "flight" });
+            Console.WriteLine($"result=[{result15}],expected =[fl]");
+
             Console.ReadLine();
         }
     }
