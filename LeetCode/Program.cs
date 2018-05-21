@@ -97,6 +97,9 @@ namespace LeetCode
             ListNode result16 = RemoveNthFromEndOfList.RemoveNthFromEnd(ConvertToListNode("1,2,3,4,5"), 2);
             Console.WriteLine($"result=[{ListNodeToString(result16)}],expected =[1,2,3,5]");
 
+            ListNode result17 = ReverseLinkedList.ReverseList(ConvertToListNode("1,2,3,4,5"));
+            Console.WriteLine($"result=[{ListNodeToString(result17)}],expected =[5,4,3,2,1]");
+
             Console.ReadLine();
         }
     }
