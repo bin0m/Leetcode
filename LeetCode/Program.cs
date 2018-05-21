@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LeetCode.Arrays;
 using LeetCode.Strings;
+using LeetCode.LinkedLists;
 
 namespace LeetCode
 {
@@ -16,8 +17,35 @@ namespace LeetCode
             return arr;
         }
 
-            static void Main(string[] args)
+        static ListNode ConvertToListNode(string str)
+        {
+            ListNode head = new ListNode(0) ;
+            ListNode pointer = head;
+            foreach (int item in str.Split(',').Select(n => Convert.ToInt32(n)))
             {
+                pointer.next = new ListNode(item);
+                pointer = pointer.next;
+            }
+            pointer.next = null;
+            return head.next;
+        }
+
+        static string ListNodeToString(ListNode ln)
+        {
+            ListNode pointer = ln;
+            StringBuilder sb = new StringBuilder();
+            while (pointer != null)
+            {
+                sb.Append(pointer.val);
+                sb.Append(',');
+                pointer = pointer.next;
+            }
+
+            return sb.ToString(0, sb.Length - 1);
+        }
+
+        static void Main(string[] args)
+        {
             int result = BestTimetoBuyandSellStockII.MaxProfit(ConvertToArray("7,1,5,3,6,4"));
             Console.WriteLine($"result={result},expected=7");
 
@@ -65,6 +93,9 @@ namespace LeetCode
 
             string result15 = LongestCommonPrefix1.LongestCommonPrefix(new string[] { "flower", "flow", "flight" });
             Console.WriteLine($"result=[{result15}],expected =[fl]");
+
+            ListNode result16 = RemoveNthFromEndOfList.RemoveNthFromEnd(ConvertToListNode("1,2,3,4,5"), 2);
+            Console.WriteLine($"result=[{ListNodeToString(result16)}],expected =[1,2,3,5]");
 
             Console.ReadLine();
         }

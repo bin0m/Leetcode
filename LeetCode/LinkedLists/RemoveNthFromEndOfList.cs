@@ -9,7 +9,7 @@ namespace LeetCode.LinkedLists
     public class RemoveNthFromEndOfList
     {
 
-        public ListNode RemoveNthFromEnd(ListNode head, int n)
+        public static ListNode RemoveNthFromEnd(ListNode head, int n)
         {
             int count = 0;
             var pointer = head;
@@ -18,17 +18,22 @@ namespace LeetCode.LinkedLists
                 pointer = pointer.next;
                 count++;
             }
+
+            if (count == n)
+            {
+                return head.next;
+            }
+
             pointer = head;
             int i = 0;
-            while (i < count - n)
+            while (i < count - n - 1)
             {
                 pointer = pointer.next;
-                count++;
+                i++;
             }
             pointer.next = pointer.next.next;
             return head;
-
         }
-        
+
     }
 }
