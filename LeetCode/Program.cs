@@ -100,6 +100,9 @@ namespace LeetCode
             ListNode result17 = ReverseLinkedList.ReverseList(ConvertToListNode("1,2,3,4,5"));
             Console.WriteLine($"result=[{ListNodeToString(result17)}],expected =[5,4,3,2,1]");
 
+            bool result18 = PalindromeNumber.IsPalindrome(121);
+            Console.WriteLine($"result=[{result18}],expected=[True]");
+
             Console.ReadLine();
         }
     }
