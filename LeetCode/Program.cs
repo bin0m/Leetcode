@@ -54,7 +54,7 @@ namespace LeetCode
 
             var result3 = ConvertToArray("1,2,3,4,5,6");
             RotateArray.Rotate(result3, 4);
-            Console.WriteLine(string.Join(",", result3));
+            Console.WriteLine($"result=[{string.Join(",", result3)}],expected=[3,4,5,6,1,2]");
 
             int result4 = SingleNumber1.SingleNumber(ConvertToArray("4,1,2,1,2"));
             Console.WriteLine($"result={result4},expected=4");
@@ -77,19 +77,19 @@ namespace LeetCode
             Console.WriteLine($"result=[{result9}],expected=[-654321]");
 
             int result10 = FirstUniqueCharacterInAString.FirstUniqChar("abcdabb");
-            Console.WriteLine($"result=[{result10}],expected=[2]");
+            Console.WriteLine($"result={result10},expected=2");
 
             bool result11 = ValidAnagram.IsAnagram("anagram", "nagaram");
-            Console.WriteLine($"result=[{result11}],expected=[True]");
+            Console.WriteLine($"result={result11},expected=True");
 
             bool result12 = ValidPalindrome.IsPalindrome("A man, a plan, a canal: Panama");
-            Console.WriteLine($"result=[{result12}],expected=[True]");
+            Console.WriteLine($"result={result12},expected=True");
 
             int result13 = StringToIntegerAtoi.MyAtoi("  -4193 with words");
             Console.WriteLine($"result=[{result13}],expected=[-4193]");
 
             int[] result14 = TwoSum1.TwoSum(ConvertToArray("2,11,6,3"),14);
-            Console.WriteLine($"result =[{ String.Join(",", result14)}],expected =[1,3]");
+            Console.WriteLine($"result=[{ String.Join(",", result14)}],expected =[1,3]");
 
             string result15 = LongestCommonPrefix1.LongestCommonPrefix(new string[] { "flower", "flow", "flight" });
             Console.WriteLine($"result=[{result15}],expected =[fl]");
@@ -101,7 +101,7 @@ namespace LeetCode
             Console.WriteLine($"result=[{ListNodeToString(result17)}],expected =[5,4,3,2,1]");
 
             bool result18 = PalindromeNumber.IsPalindrome(121);
-            Console.WriteLine($"result=[{result18}],expected=[True]");
+            Console.WriteLine($"result={result18},expected=True");
 
             Console.ReadLine();
         }
