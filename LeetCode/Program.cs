@@ -103,6 +103,9 @@ namespace LeetCode
             bool result18 = PalindromeNumber.IsPalindrome(121);
             Console.WriteLine($"result={result18},expected=True");
 
+            ListNode result19 = MergeTwoSortedLists.MergeTwoLists(ConvertToListNode("1,2,4"), ConvertToListNode("1,3,4"));
+            Console.WriteLine($"result=[{ListNodeToString(result19)}],expected =[1,1,2,3,4,4]");
+
             Console.ReadLine();
         }
     }
