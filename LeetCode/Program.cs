@@ -106,6 +106,9 @@ namespace LeetCode
             ListNode result19 = MergeTwoSortedLists.MergeTwoLists(ConvertToListNode("1,2,4"), ConvertToListNode("1,3,4"));
             Console.WriteLine($"result=[{ListNodeToString(result19)}],expected =[1,1,2,3,4,4]");
 
+            String result20 = CountAndSay1.CountAndSay(6);
+            Console.WriteLine($"result={result20},expected=312211");
+
             Console.ReadLine();
         }
     }
