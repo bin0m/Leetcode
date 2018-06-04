@@ -67,6 +67,7 @@
     <Compile Include="Arrays\TwoSum1.cs" />
     <Compile Include="LinkedLists\ListNode.cs" />
     <Compile Include="LinkedLists\MergeTwoSortedLists.cs" />
+    <Compile Include="LinkedLists\PalindromeLinkedList.cs" />
     <Compile Include="LinkedLists\RemoveNthFromEndOfList.cs" />
     <Compile Include="LinkedLists\ReverseLinkedList.cs" />
     <Compile Include="Program.cs" />
