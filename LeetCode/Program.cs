@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using LeetCode.Arrays;
 using LeetCode.Strings;
-using LeetCode.LinkedLists;
 
 namespace LeetCode
 {
@@ -15,34 +14,8 @@ namespace LeetCode
         {
             int[] arr =  str.Split(',').Select(n => Convert.ToInt32(n)).ToArray();
             return arr;
-        }
+        }       
 
-        static ListNode ConvertToListNode(string str)
-        {
-            ListNode head = new ListNode(0) ;
-            ListNode pointer = head;
-            foreach (int item in str.Split(',').Select(n => Convert.ToInt32(n)))
-            {
-                pointer.next = new ListNode(item);
-                pointer = pointer.next;
-            }
-            pointer.next = null;
-            return head.next;
-        }
-
-        static string ListNodeToString(ListNode ln)
-        {
-            ListNode pointer = ln;
-            StringBuilder sb = new StringBuilder();
-            while (pointer != null)
-            {
-                sb.Append(pointer.val);
-                sb.Append(',');
-                pointer = pointer.next;
-            }
-
-            return sb.ToString(0, sb.Length - 1);
-        }
 
         static void Main(string[] args)
         {
@@ -94,25 +67,27 @@ namespace LeetCode
             string result15 = LongestCommonPrefix1.LongestCommonPrefix(new string[] { "flower", "flow", "flight" });
             Console.WriteLine($"result=[{result15}],expected =[fl]");
 
-            ListNode result16 = RemoveNthFromEndOfList.RemoveNthFromEnd(ConvertToListNode("1,2,3,4,5"), 2);
-            Console.WriteLine($"result=[{ListNodeToString(result16)}],expected =[1,2,3,5]");
+            LinkedLists.ListNode result16 = LinkedLists.RemoveNthFromEnd(LinkedLists.ConvertToListNode("1,2,3,4,5"), 2);
+            Console.WriteLine($"result=[{LinkedLists.ListNodeToString(result16)}],expected =[1,2,3,5]");
 
-            ListNode result17 = ReverseLinkedList.ReverseList(ConvertToListNode("1,2,3,4,5"));
-            Console.WriteLine($"result=[{ListNodeToString(result17)}],expected =[5,4,3,2,1]");
+            LinkedLists.ListNode result17 = LinkedLists.ReverseList(LinkedLists.ConvertToListNode("1,2,3,4,5"));
+            Console.WriteLine($"result=[{LinkedLists.ListNodeToString(result17)}],expected =[5,4,3,2,1]");
 
             bool result18 = PalindromeNumber.IsPalindrome(121);
             Console.WriteLine($"result={result18},expected=True");
 
-            ListNode result19 = MergeTwoSortedLists.MergeTwoLists(ConvertToListNode("1,2,4"), ConvertToListNode("1,3,4"));
-            Console.WriteLine($"result=[{ListNodeToString(result19)}],expected =[1,1,2,3,4,4]");
+            LinkedLists.ListNode result19 = LinkedLists.MergeTwoLists(
+                LinkedLists.ConvertToListNode("1,2,4"), 
+                LinkedLists.ConvertToListNode("1,3,4"));
+            Console.WriteLine($"result=[{LinkedLists.ListNodeToString(result19)}],expected =[1,1,2,3,4,4]");
 
             String result20 = CountAndSay1.CountAndSay(6);
             Console.WriteLine($"result={result20},expected=312211");
 
-            bool result21 = PalindromeLinkedList.IsPalindrome(ConvertToListNode("1,2,3,2,1"));
+            bool result21 = LinkedLists.IsPalindrome(LinkedLists.ConvertToListNode("1,2,3,2,1"));
             Console.WriteLine($"result=[{result21}],expected =[True]");
 
-            bool result22 = PalindromeLinkedList.IsPalindrome2(ConvertToListNode("1,2,3, 2,1"));
+            bool result22 = LinkedLists.IsPalindrome2(LinkedLists.ConvertToListNode("1,2,3, 2,1"));
             Console.WriteLine($"result=[{result22}],expected =[True]");
 
             Console.ReadLine();
