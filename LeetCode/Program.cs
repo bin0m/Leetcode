@@ -109,6 +109,9 @@ namespace LeetCode
             String result20 = CountAndSay1.CountAndSay(6);
             Console.WriteLine($"result={result20},expected=312211");
 
+            bool result21 = PalindromeLinkedList.IsPalindrome(ConvertToListNode("1,2,3,2,1"));
+            Console.WriteLine($"result=[{result21}],expected =[True]");
+
             Console.ReadLine();
         }
     }
