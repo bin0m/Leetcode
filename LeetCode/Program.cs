@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using LeetCode.Arrays;
-using LeetCode.Strings;
 
 namespace LeetCode
 {
@@ -43,28 +39,28 @@ namespace LeetCode
             MoveZeroes1.MoveZeroes(result7);
             Console.WriteLine($"result=[{String.Join(",", result7)}],expected=[1,3,12,0,0]");
 
-            string result8 = ReverseString1.ReverseString("hello");
+            string result8 = Strings.ReverseString("hello");
             Console.WriteLine($"result=[{result8}],expected=[olleh]");
 
-            int result9 = ReverseInteger1.Reverse(-123456);
+            int result9 = Strings.Reverse(-123456);
             Console.WriteLine($"result=[{result9}],expected=[-654321]");
 
-            int result10 = FirstUniqueCharacterInAString.FirstUniqChar("abcdabb");
+            int result10 = Strings.FirstUniqChar("abcdabb");
             Console.WriteLine($"result={result10},expected=2");
 
-            bool result11 = ValidAnagram.IsAnagram("anagram", "nagaram");
+            bool result11 = Strings.IsAnagram("anagram", "nagaram");
             Console.WriteLine($"result={result11},expected=True");
 
-            bool result12 = ValidPalindrome.IsPalindrome("A man, a plan, a canal: Panama");
+            bool result12 = Strings.IsPalindrome("A man, a plan, a canal: Panama");
             Console.WriteLine($"result={result12},expected=True");
 
-            int result13 = StringToIntegerAtoi.MyAtoi("  -4193 with words");
+            int result13 = Strings.MyAtoi("  -4193 with words");
             Console.WriteLine($"result=[{result13}],expected=[-4193]");
 
             int[] result14 = TwoSum1.TwoSum(ConvertToArray("2,11,6,3"),14);
             Console.WriteLine($"result=[{ String.Join(",", result14)}],expected =[1,3]");
 
-            string result15 = LongestCommonPrefix1.LongestCommonPrefix(new string[] { "flower", "flow", "flight" });
+            string result15 = Strings.LongestCommonPrefix(new string[] { "flower", "flow", "flight" });
             Console.WriteLine($"result=[{result15}],expected =[fl]");
 
             LinkedLists.ListNode result16 = LinkedLists.RemoveNthFromEnd(LinkedLists.ConvertToListNode("1,2,3,4,5"), 2);
@@ -73,7 +69,7 @@ namespace LeetCode
             LinkedLists.ListNode result17 = LinkedLists.ReverseList(LinkedLists.ConvertToListNode("1,2,3,4,5"));
             Console.WriteLine($"result=[{LinkedLists.ListNodeToString(result17)}],expected =[5,4,3,2,1]");
 
-            bool result18 = PalindromeNumber.IsPalindrome(121);
+            bool result18 = Strings.IsPalindrome(121);
             Console.WriteLine($"result={result18},expected=True");
 
             LinkedLists.ListNode result19 = LinkedLists.MergeTwoLists(
@@ -81,7 +77,7 @@ namespace LeetCode
                 LinkedLists.ConvertToListNode("1,3,4"));
             Console.WriteLine($"result=[{LinkedLists.ListNodeToString(result19)}],expected =[1,1,2,3,4,4]");
 
-            String result20 = CountAndSay1.CountAndSay(6);
+            String result20 = Strings.CountAndSay(6);
             Console.WriteLine($"result={result20},expected=312211");
 
             bool result21 = LinkedLists.IsPalindrome(LinkedLists.ConvertToListNode("1,2,3,2,1"));
