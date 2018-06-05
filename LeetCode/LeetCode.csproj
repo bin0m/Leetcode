@@ -57,14 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Arrays\BestTimetoBuyandSellStockII.cs" />
-    <Compile Include="Arrays\ContainsDuplicates.cs" />
-    <Compile Include="Arrays\IntersectionOfTwoArraysII.cs" />
-    <Compile Include="Arrays\MoveZeroes1.cs" />
-    <Compile Include="Arrays\PlusOne1.cs" />
-    <Compile Include="Arrays\RotateArray.cs" />
-    <Compile Include="Arrays\SingleNumber1.cs" />
-    <Compile Include="Arrays\TwoSum1.cs" />
+    <Compile Include="Arrays.cs" />
     <Compile Include="LinkedLists.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
