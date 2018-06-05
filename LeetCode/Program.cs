@@ -112,6 +112,9 @@ namespace LeetCode
             bool result21 = PalindromeLinkedList.IsPalindrome(ConvertToListNode("1,2,3,2,1"));
             Console.WriteLine($"result=[{result21}],expected =[True]");
 
+            bool result22 = PalindromeLinkedList.IsPalindrome2(ConvertToListNode("1,2,3, 2,1"));
+            Console.WriteLine($"result=[{result22}],expected =[True]");
+
             Console.ReadLine();
         }
     }
