@@ -84,6 +84,9 @@ namespace LeetCode
             bool result22 = LinkedLists.IsPalindrome2(LinkedLists.ConvertToListNode("1,2,3, 2,1"));
             Console.WriteLine($"result=[{result22}],expected =[True]");
 
+            int result23 = Trees.MaxDepth(new Trees.TreeNode(0));
+            Console.WriteLine($"result=[{result23}],expected =[3]");
+
             Console.ReadLine();
         }
     }
