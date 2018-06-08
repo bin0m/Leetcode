@@ -45,15 +45,18 @@ namespace LeetCode
                         queue.Enqueue(current.right);
                     }
                     i++;
-                }
-                                
+                }                                
             }
             return root;
         }
  
         public static int MaxDepth(TreeNode root)
         {
-            return 0;
+            if (root == null)
+            {
+                return 0;
+            }
+            return 1 + Math.Max(MaxDepth(root.left), MaxDepth(root.right));
         }
         
     }
