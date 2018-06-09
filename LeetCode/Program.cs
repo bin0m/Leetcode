@@ -87,6 +87,9 @@ namespace LeetCode
             int result23 = Trees.MaxDepth(Trees.CreateBinaryTree(new int?[] { 3, 9, 20, null, null, 15, 7 }));
             Console.WriteLine($"result=[{result23}],expected =[3]");
 
+            bool result24 = Trees.IsValidBST(Trees.CreateBinaryTree(new int?[] { 5, 1, 4, null, null, 3, 6 }));
+            Console.WriteLine($"result=[{result24}],expected =[False]");
+
             Console.ReadLine();
         }
     }
