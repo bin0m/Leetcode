@@ -24,7 +24,7 @@ namespace LeetCode
         }
 
         // helper method
-        public static TreeNode CreateBinaryTree(int?[] arr)
+        internal static TreeNode CreateBinaryTree(int?[] arr)
         {
             if (arr == null || arr.Length < 1)
             {
@@ -57,6 +57,32 @@ namespace LeetCode
             }
 
             return root;
+        }
+
+        // helper method for printing Tree
+        internal static String TreeNodeToString(TreeNode root)
+        {
+            var sb = new StringBuilder();
+            sb.Append('[');
+
+            var queue = new Queue<TreeNode>();
+            queue.Enqueue(root);
+            while (queue.Count > 0)
+            {
+                TreeNode node = queue.Dequeue();
+                if (node != null)
+                {
+                    sb.Append(node.val).Append(',');
+                    queue.Enqueue(node.left);
+                    queue.Enqueue(node.right);
+                }
+                else
+                {
+                    sb.Append("null,");
+                }
+            }
+            sb.Append(']');
+            return sb.ToString();
         }
 
         // Maximum Depth of Binary Tree
@@ -171,5 +197,9 @@ namespace LeetCode
             }
             return levels;
         }
+
+     
+
+        
     }
 }

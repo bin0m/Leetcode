@@ -108,10 +108,12 @@ namespace LeetCode
             Console.WriteLine($"result=[{result25}],expected =[True]");
 
             var result26 = Trees.LevelOrder(Trees.CreateBinaryTree(new int?[] { 3, 9, 20, null, null, 15, 7 }));
-            Console.WriteLine($"result={ListOfListsToString(result26)},expected =[[3],[9,20],[15,7]]");
+            Console.WriteLine($"result={ListOfListsToString(result26)},expected = [[3],[9,20],[15,7]]");
 
+            var result27 = Trees.TreeNodeToString(Trees.CreateBinaryTree(new int?[] {3, 9, 20, null, null, 15, 7}));
+            Console.WriteLine($"result={result27},expected = [3,9,20,null,null,15,7,null,null,null,null,]");
 
-            Console.ReadLine();
+           Console.ReadLine();
         }
     }
 }
