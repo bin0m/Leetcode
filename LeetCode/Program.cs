@@ -90,6 +90,10 @@ namespace LeetCode
             bool result24 = Trees.IsValidBST(Trees.CreateBinaryTree(new int?[] { 5, 1, 4, null, null, 3, 6 }));
             Console.WriteLine($"result=[{result24}],expected =[False]");
 
+            bool result25 = Trees.IsSymmetric(Trees.CreateBinaryTree(new int?[] {1, 2, 2, 3, 4, 4, 3}));
+            Console.WriteLine($"result=[{result25}],expected =[True]");
+
+
             Console.ReadLine();
         }
     }

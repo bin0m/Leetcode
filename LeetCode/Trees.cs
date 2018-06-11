@@ -109,5 +109,36 @@ namespace LeetCode
 
             return isValid;
         }
+
+        // Symmetric Tree
+        public static bool IsSymmetric(TreeNode root)
+        {
+            if (root == null)
+            {
+                return true;
+            }
+
+            return IsSymmetric(root.left, root.right);
+        }
+
+        // (helper for IsSymmetric) check equality between a node and b node, and also between there childs (in mirror)
+        public static bool IsSymmetric(TreeNode a, TreeNode b)
+        {
+            if (a == null && b == null)
+            {
+                return true;
+            }
+
+            if (a == null || b == null)
+            {
+                return false;
+            }
+
+            bool isSymmetric = (a.val == b.val) 
+                               && IsSymmetric(a.left, b.right) 
+                               && IsSymmetric(a.right, b.left);
+            return isSymmetric;
+
+        }
     }
 }
