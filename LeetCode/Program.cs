@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace LeetCode
 {
@@ -9,7 +11,19 @@ namespace LeetCode
         {
             int[] arr =  str.Split(',').Select(n => Convert.ToInt32(n)).ToArray();
             return arr;
-        }       
+        }
+
+        static String ListOfListsToString(IList<IList<int>> lists)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append('[');
+            foreach (var list in lists)
+            {
+                sb.Append('[').Append(String.Join(",", list)).Append("],");
+            }
+            sb.Append(']');
+            return sb.ToString();
+        }
 
 
         static void Main(string[] args)
@@ -92,6 +106,9 @@ namespace LeetCode
 
             bool result25 = Trees.IsSymmetric(Trees.CreateBinaryTree(new int?[] {1, 2, 2, 3, 4, 4, 3}));
             Console.WriteLine($"result=[{result25}],expected =[True]");
+
+            var result26 = Trees.LevelOrder(Trees.CreateBinaryTree(new int?[] { 3, 9, 20, null, null, 15, 7 }));
+            Console.WriteLine($"result={ListOfListsToString(result26)},expected =[[3],[9,20],[15,7]]");
 
 
             Console.ReadLine();

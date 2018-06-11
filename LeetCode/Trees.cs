@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace LeetCode
@@ -139,6 +140,36 @@ namespace LeetCode
                                && IsSymmetric(a.right, b.left);
             return isSymmetric;
 
+        }
+
+        // Binary Tree Level Order Traversal
+        public static IList<IList<int>>  LevelOrder(TreeNode root)
+        {
+            var levels = new List<IList<int>>();
+            var queue = new Queue<TreeNode>();
+            queue.Enqueue(root);
+            while (queue.Count > 0)
+            {
+                var level = new List<int>();
+                int nodesOnLevel = queue.Count;
+                for (int i = 0; i < nodesOnLevel; i++)
+                {
+                    TreeNode node = queue.Dequeue();
+                    if (node != null)
+                    {
+                        level.Add(node.val);
+                        queue.Enqueue(node.left);
+                        queue.Enqueue(node.right);
+                    }
+                }
+
+                // last level will be empty, so check not to add it
+                if (level.Count > 0)
+                {
+                    levels.Add(level);
+                }
+            }
+            return levels;
         }
     }
 }
