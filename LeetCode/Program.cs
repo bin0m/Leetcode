@@ -113,7 +113,10 @@ namespace LeetCode
             var result27 = Trees.TreeNodeToString(Trees.CreateBinaryTree(new int?[] {3, 9, 20, null, null, 15, 7}));
             Console.WriteLine($"result={result27},expected = [3,9,20,null,null,15,7,null,null,null,null,]");
 
-           Console.ReadLine();
+            Trees.TreeNode result28 = Trees.SortedArrayToBST(new[] { -10, -3, 0, 5, 9 });
+            Console.WriteLine($"result={Trees.TreeNodeToString(result28)},expected = [0,-10,5,null,-3,null,9,null,null,null,null,]");
+
+            Console.ReadLine();
         }
     }
 }

@@ -198,8 +198,39 @@ namespace LeetCode
             return levels;
         }
 
-     
+        //Convert Sorted Array to Binary Search Tree
+        public static TreeNode SortedArrayToBST(int[] nums)
+        {
+            //edge case
+            if (nums == null)
+            {
+                return null;
+            }
+            int n = nums.Length;
+            if (n == 0)
+            {
+                return null;
+            }
+            return SortedArrayToBST(nums, 0, n - 1);
+        }
 
-        
+        // (helper for SortedArrayToBST) choose mid as root node and go for childs in recursion
+        public static TreeNode SortedArrayToBST(int[] nums, int low, int high)
+        {
+            int mid = (low + high) / 2;
+            TreeNode node = new TreeNode(nums[mid]);
+            if (mid > low)
+            {
+                node.left = SortedArrayToBST(nums, low, mid - 1);
+            }
+            if (mid < high)
+            {
+                node.right = SortedArrayToBST(nums, mid + 1, high);
+            }
+            return node;
+
+        }
+
+
     }
 }
