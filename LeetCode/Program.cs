@@ -116,6 +116,10 @@ namespace LeetCode
             Trees.TreeNode result28 = Trees.SortedArrayToBST(new[] { -10, -3, 0, 5, 9 });
             Console.WriteLine($"result={Trees.TreeNodeToString(result28)},expected = [0,-10,5,null,-3,null,9,null,null,null,null,]");
 
+            var result29 = new[] {1, 2, 3, 0, 0, 0};
+            Arrays.MergeSorted(result29, 3, new[] { 2, 5, 6 }, 3);
+            Console.WriteLine($"result=[{string.Join(",", result29)}],expected=[1,2,2,3,5,6]");
+
             Console.ReadLine();
         }
     }
