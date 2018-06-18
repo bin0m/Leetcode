@@ -238,5 +238,28 @@ namespace LeetCode
                 nums1[i--] = nums2[n--];
             }
         }
+
+        //First Bad Version
+        public static int FirstBadVersion(int n, bool[] arr)
+        {
+            bool found = new bool();
+            int from = 0;
+            int mid = 0;
+            while (from < n)
+            {
+                if (found)
+                {
+                    n = mid;
+                    mid = (from + n) / 2;
+                }
+                else
+                {
+                    from = mid + 1;
+                    mid = (from + n) / 2;
+                }
+                found = arr[mid];
+            }
+            return mid;
+        }
     }
 }
