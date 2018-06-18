@@ -120,6 +120,11 @@ namespace LeetCode
             Arrays.MergeSorted(result29, 3, new[] { 2, 5, 6 }, 3);
             Console.WriteLine($"result=[{string.Join(",", result29)}],expected=[1,2,2,3,5,6]");
 
+            LinkedLists.ListNode result30 = LinkedLists.AddTwoNumbers(
+                LinkedLists.ConvertToListNode("1,9,9"),
+                LinkedLists.ConvertToListNode("9"));
+            Console.WriteLine($"result=[{LinkedLists.ListNodeToString(result30)}],expected =[0,0,0,1]");
+
             Console.ReadLine();
         }
     }
