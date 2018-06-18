@@ -321,5 +321,43 @@ namespace LeetCode
             sb.Append(prevCh);
             return sb.ToString();
         }
+
+        // Longest Substring Without Repeating Characters 
+        // O(n^2)
+        public static int LengthOfLongestSubstring(string s)
+        {
+            HashSet<char> hs = new HashSet<char>();
+            int currentLength = 0;
+            int currentStart = 0;
+            int longest = 0;
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (hs.Contains(s[i]))
+                {
+                    for (int j = currentStart; j < i; j++)
+                    {
+                        if (s[j] == s[i])
+                        {
+                            currentLength -= j - currentStart;
+                            currentStart = j + 1;
+                            break;
+                        }
+                        else
+                        {
+                            hs.Remove(s[j]);
+                        }
+                    }
+                }
+                else
+                {
+                    hs.Add(s[i]);
+                    if (++currentLength > longest)
+                    {
+                        longest = currentLength;
+                    }
+                }
+            }
+            return longest;
+        }
     }
 }

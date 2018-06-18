@@ -125,6 +125,9 @@ namespace LeetCode
                 LinkedLists.ConvertToListNode("9"));
             Console.WriteLine($"result=[{LinkedLists.ListNodeToString(result30)}],expected =[0,0,0,1]");
 
+            int result31 = Strings.LengthOfLongestSubstring("peerpe");
+            Console.WriteLine($"result={result31},expected=3");
+
             Console.ReadLine();
         }
     }
