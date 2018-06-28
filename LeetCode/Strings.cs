@@ -359,5 +359,92 @@ namespace LeetCode
             }
             return longest;
         }
+
+        // Roman to Integer
+        // O(n)
+        public static int RomanToInt(string s)
+        {
+            if (string.IsNullOrEmpty(s))
+            {
+                return 0;
+            }
+            int n = 0;
+            for (int i = s.Length - 1; i >= 0; i--)
+            {
+                switch (s[i])
+                {
+                    case 'I':
+                        n++;
+                        break;
+                    case 'V':
+                        if (i > 0 && s[i - 1] == 'I')
+                        {
+                            n += 4;
+                            i--;
+                        }
+                        else
+                        {
+                            n += 5;
+                        }
+                        break;
+                    case 'X':
+                        if (i > 0 && s[i - 1] == 'I')
+                        {
+                            n += 9;
+                            i--;
+                        }
+                        else
+                        {
+                            n += 10;
+                        }
+                        break;
+                    case 'L':
+                        if (i > 0 && s[i - 1] == 'X')
+                        {
+                            n += 40;
+                            i--;
+                        }
+                        else
+                        {
+                            n += 50;
+                        }
+                        break;
+                    case 'C':
+                        if (i > 0 && s[i - 1] == 'X')
+                        {
+                            n += 90;
+                            i--;
+                        }
+                        else
+                        {
+                            n += 100;
+                        }
+                        break;
+                    case 'D':
+                        if (i > 0 && s[i - 1] == 'C')
+                        {
+                            n += 400;
+                            i--;
+                        }
+                        else
+                        {
+                            n += 500;
+                        }
+                        break;
+                    case 'M':
+                        if (i > 0 && s[i - 1] == 'C')
+                        {
+                            n += 900;
+                            i--;
+                        }
+                        else
+                        {
+                            n += 1000;
+                        }
+                        break;
+                }
+            }
+            return n;
+        }
     }
 }

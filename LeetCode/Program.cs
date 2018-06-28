@@ -128,6 +128,9 @@ namespace LeetCode
             int result31 = Strings.LengthOfLongestSubstring("peerpe");
             Console.WriteLine($"result={result31},expected=3");
 
+            Console.WriteLine($"result={Strings.RomanToInt("LVIII")},expected=58");
+            Console.WriteLine($"result={Strings.RomanToInt("MCMXCIV")},expected=1994");
+
             Console.ReadLine();
         }
     }
