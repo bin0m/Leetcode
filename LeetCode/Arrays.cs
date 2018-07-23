@@ -261,5 +261,79 @@ namespace LeetCode
             }
             return mid;
         }
+
+        //4Sum
+        public static IList<IList<int>> FourSum(int[] nums, int target)
+        {
+            HashSet<IList<int>> ans = new HashSet<IList<int>>();
+            var sumOfPairs = new Dictionary<int, HashSet<Tuple<int, int>>>();
+            var frequencies = new Dictionary<int, int>();
+            foreach (int num in nums)
+            {
+                if (frequencies.ContainsKey(num))
+                {
+                    frequencies[num]++;
+                }
+                else
+                {
+                    frequencies[num] = 1;
+                }
+            }
+            for (int i = 0; i < nums.Length; i++)
+            {
+                for (int j = i + 1; j < nums.Length; j++)
+                {
+                    int sum = nums[i] + nums[j];
+                    var pair = new Tuple<int, int>(nums[i], nums[j]);
+                    if (sumOfPairs.ContainsKey(sum))
+                    {
+                        if (!sumOfPairs[sum].Contains(new Tuple<int, int>(nums[j], nums[i])))
+                        {
+                            sumOfPairs[sum].Add(pair);
+                        }
+                    }
+                    else
+                    {
+                        sumOfPairs.Add(sum, new HashSet<Tuple<int, int>> { pair });
+                    }
+                }
+            }
+
+            foreach (var pairSum in sumOfPairs)
+            {
+                int complement = target - pairSum.Key;
+                if (sumOfPairs.ContainsKey(complement))
+                {
+                    foreach (Tuple<int, int> pair1 in sumOfPairs[complement])
+                    {
+                        foreach (Tuple<int, int> pair2 in pairSum.Value)
+                        {
+                            if (pair1.Item1 == pair2.Item1 || pair1.Item1 == pair2.Item2)
+                            {
+                                if (frequencies[pair1.Item1] < 2)
+                                {
+                                    continue;
+                                }
+                            }
+                            if (pair1.Item2 == pair2.Item1 || pair1.Item2 == pair2.Item2)
+                            {
+                                if (frequencies[pair1.Item2] < 2)
+                                {
+                                    continue;
+                                }
+                            }
+                            var sumOfFour = new List<int>() { pair1.Item1, pair1.Item2, pair2.Item1, pair2.Item2 };
+                            sumOfFour.Sort();
+                            ans.Add(sumOfFour);
+                        }
+                    }
+                    sumOfPairs[complement].Clear();
+                    pairSum.Value.Clear();
+                }
+            }
+
+            return ans.ToList();
+
+        }
     }
 }
