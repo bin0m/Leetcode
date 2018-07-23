@@ -119,9 +119,7 @@ namespace LeetCode
             var result29 = new[] {1, 2, 3, 0, 0, 0};
             Arrays.MergeSorted(result29, 3, new[] { 2, 5, 6 }, 3);
             Console.WriteLine($"result=[{string.Join(",", result29)}],expected=[1,2,2,3,5,6]");
-
-            Console.WriteLine($"result=[{ListOfListsToString(Arrays.FourSum(new []{ 1, 0, -1, 0, -2, 2 }, 0))}],expected=[[-1, 0, 0, 1],[-2, -1, 1, 2],[-2, 0, 0, 2]]");
-
+          
             LinkedLists.ListNode result30 = LinkedLists.AddTwoNumbers(
                 LinkedLists.ConvertToListNode("1,9,9"),
                 LinkedLists.ConvertToListNode("9"));
@@ -132,6 +130,8 @@ namespace LeetCode
 
             Console.WriteLine($"result={Strings.RomanToInt("LVIII")},expected=58");
             Console.WriteLine($"result={Strings.RomanToInt("MCMXCIV")},expected=1994");
+
+            Console.WriteLine($"result=[{ListOfListsToString(Arrays.FourSum(new[] { 1, 0, -1, 0, -2, 2 }, 0))}],expected=[[-1, 0, 0, 1],[-2, -1, 1, 2],[-2, 0, 0, 2]]");
 
             Console.ReadLine();
         }
