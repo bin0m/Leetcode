@@ -33,6 +33,10 @@ namespace LeetCode
         // Help function for testing
         internal static string ListNodeToString(ListNode ln)
         {
+            if( ln == null )
+            {
+                return "null";
+            }
             ListNode pointer = ln;
             StringBuilder sb = new StringBuilder();
             while (pointer != null)
@@ -212,6 +216,71 @@ namespace LeetCode
             }
             return true;
         }
-        
+
+        // Add Two Numbers 
+        // O(m+n)
+        public static ListNode AddTwoNumbers(ListNode l1, ListNode l2)
+        {
+            ListNode p1 = l1;
+            ListNode p2 = l2;
+            ListNode result = new ListNode(-1);
+            ListNode pr = result;
+            int remainder = 0;
+            while (p1 != null && p2 != null)
+            {
+                int sum = (p1.val + p2.val + remainder);
+                if (sum < 10)
+                {
+                    pr.next = new ListNode(sum);
+                    remainder = 0;
+                }
+                else
+                {
+                    pr.next = new ListNode(sum - 10);
+                    remainder = 1;
+                }
+                p1 = p1.next;
+                p2 = p2.next;
+                pr = pr.next;
+            }
+            while (p1 != null)
+            {
+                int sum = p1.val + remainder;
+                if (sum < 10)
+                {
+                    pr.next = new ListNode(sum);
+                    remainder = 0;
+                }
+                else
+                {
+                    pr.next = new ListNode(sum - 10);
+                    remainder = 1;
+                }
+                p1 = p1.next;
+                pr = pr.next;
+            }
+            while (p2 != null)
+            {
+                int sum = p2.val + remainder;
+                if (sum < 10)
+                {
+                    pr.next = new ListNode(sum);
+                    remainder = 0;
+                }
+                else
+                {
+                    pr.next = new ListNode(sum - 10);
+                    remainder = 1;
+                }
+                p2 = p2.next;
+                pr = pr.next;
+            }
+
+            if(remainder == 1)
+            {
+                pr.next = new ListNode(1);
+            }           
+            return result.next;
+        }
     }
 }

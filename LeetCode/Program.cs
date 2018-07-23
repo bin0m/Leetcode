@@ -122,6 +122,17 @@ namespace LeetCode
 
             Console.WriteLine($"result=[{ListOfListsToString(Arrays.FourSum(new []{ 1, 0, -1, 0, -2, 2 }, 0))}],expected=[[-1, 0, 0, 1],[-2, -1, 1, 2],[-2, 0, 0, 2]]");
 
+            LinkedLists.ListNode result30 = LinkedLists.AddTwoNumbers(
+                LinkedLists.ConvertToListNode("1,9,9"),
+                LinkedLists.ConvertToListNode("9"));
+            Console.WriteLine($"result=[{LinkedLists.ListNodeToString(result30)}],expected =[0,0,0,1]");
+
+            int result31 = Strings.LengthOfLongestSubstring("peerpe");
+            Console.WriteLine($"result={result31},expected=3");
+
+            Console.WriteLine($"result={Strings.RomanToInt("LVIII")},expected=58");
+            Console.WriteLine($"result={Strings.RomanToInt("MCMXCIV")},expected=1994");
+
             Console.ReadLine();
         }
     }
