@@ -53,5 +53,77 @@ namespace LeetCode.UnitTests
         {
             Assert.AreEqual(false, Arrays.ContainsDuplicate(new[] { 7, 6, 4, 3, 1 }));
         }
+
+        [TestMethod]
+        public void RotateTest1()
+        {
+            var emptyArr = new  int[0];
+            Arrays.Rotate(emptyArr, 2);
+            CollectionAssert.AreEqual(new int[0], emptyArr);
+        }
+
+        [TestMethod]
+        public void RotateTest2()
+        {
+            var sampleArr = new[] { 1 };
+            Arrays.Rotate(sampleArr, 1);
+            CollectionAssert.AreEqual(new[] { 1 }, sampleArr);
+        }
+
+        [TestMethod]
+        public void RotateTest3()
+        {
+            var sampleArr = new[] { 1 };
+            Arrays.Rotate(sampleArr, 4);
+            CollectionAssert.AreEqual(new[] { 1 }, sampleArr);
+        }
+
+        [TestMethod]
+        public void RotateTest4()
+        {
+            var sampleArr = new[] { 1, 2 };
+            Arrays.Rotate(sampleArr, 0);
+            CollectionAssert.AreEqual(new[] { 1, 2 }, sampleArr);
+        }
+
+        [TestMethod]
+        public void RotateTest5()
+        {
+            var sampleArr = new[] { 1, 2 };
+            Arrays.Rotate(sampleArr, 1);
+            CollectionAssert.AreEqual(new[] { 2, 1 }, sampleArr);
+        }
+
+        [TestMethod]
+        public void RotateTest6()
+        {
+            var sampleArr = new[] { 1, 2 };
+            Arrays.Rotate(sampleArr, 4);
+            CollectionAssert.AreEqual(new[] { 1, 2 }, sampleArr);
+        }
+
+        [TestMethod]
+        public void RotateTest7()
+        {
+            var sampleArr = new[] { 1, 2 };
+            Arrays.Rotate(sampleArr, 5);
+            CollectionAssert.AreEqual(new[] { 2, 1 }, sampleArr);
+        }
+
+        [TestMethod]
+        public void RotateTest8()
+        {
+            var sampleArr = new[] { 1, 2, 3 };
+            Arrays.Rotate(sampleArr, 4);
+            CollectionAssert.AreEqual(new[] { 3, 1, 2 }, sampleArr);
+        }
+
+        [TestMethod]
+        public void RotateTest9()
+        {
+            var sampleArr = new[] { 1, 2, 3 };
+            Arrays.Rotate(sampleArr, 5);
+            CollectionAssert.AreEqual(new[] { 2, 3, 1 }, sampleArr);
+        }
     }
 }
