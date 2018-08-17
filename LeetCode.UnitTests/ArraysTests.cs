@@ -125,5 +125,29 @@ namespace LeetCode.UnitTests
             Arrays.Rotate(sampleArr, 5);
             CollectionAssert.AreEqual(new[] { 2, 3, 1 }, sampleArr);
         }
+
+        [TestMethod]
+        public void SingleNumberTest1()
+        {
+            Assert.AreEqual(1, Arrays.SingleNumber(new[] { 1 }));
+        }
+
+        [TestMethod]
+        public void SingleNumberTest2()
+        {
+            Assert.AreEqual(0, Arrays.SingleNumber(new[] { 1, 1 }));
+        }
+
+        [TestMethod]
+        public void SingleNumberTest3()
+        {
+            Assert.AreEqual(2, Arrays.SingleNumber(new[] { 1, 2, 1 }));
+        }
+
+        [TestMethod]
+        public void SingleNumberTest4()
+        {
+            Assert.AreEqual(3, Arrays.SingleNumber(new[] { 1, 2, 1, 3, 2 }));
+        }
     }
 }

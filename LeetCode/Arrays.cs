@@ -71,6 +71,8 @@ namespace LeetCode
 
         }
 
+        // Given a non-empty array of integers, every element appears twice except for one. 
+        // Find that single one
         public static int SingleNumber(int[] nums)
         {
             int size = nums.Length;
