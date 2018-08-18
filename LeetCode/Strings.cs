@@ -323,41 +323,73 @@ namespace LeetCode
         }
 
         // Longest Substring Without Repeating Characters 
-        // O(n^2)
-        public static int LengthOfLongestSubstring(string s)
+        // time: O(n)
+        // space: O(256)
+        public static int LengthOfLongestSubstring(string str)
         {
-            HashSet<char> hs = new HashSet<char>();
-            int currentLength = 0;
-            int currentStart = 0;
-            int longest = 0;
-            for (int i = 0; i < s.Length; i++)
+            int n = str.Length;
+
+            // length of current substring
+            int currentLength = 1;
+
+            // result
+            int maxLength = 1;
+
+            // previous index
+
+            int i;
+            int[] visited = new int[256];
+
+            /* Initialize the visited array as -1, -1 is 
+            used to indicate that character has not been 
+            visited yet. */
+            for (i = 0; i < 256; i++)
             {
-                if (hs.Contains(s[i]))
-                {
-                    for (int j = currentStart; j < i; j++)
-                    {
-                        if (s[j] == s[i])
-                        {
-                            currentLength -= j - currentStart;
-                            currentStart = j + 1;
-                            break;
-                        }
-                        else
-                        {
-                            hs.Remove(s[j]);
-                        }
-                    }
-                }
+                visited[i] = -1;
+            }
+
+            /* Mark first character as visited by storing the
+                index of first character in visited array. */
+            visited[str[0]] = 0;
+
+            /* Start from the second character. First character is
+            already processed (cur_len and max_len are initialized
+            as 1, and visited[str[0]] is set */
+            for (i = 1; i < n; i++)
+            {
+                var prevIndex = visited[str[i]];
+
+                /* If the current character is not present in
+                the already processed substring or it is not
+                part of the current Substring, then do cur_len++ */
+                if (prevIndex == -1 || i - currentLength > prevIndex)
+                    currentLength++;
+
+                /* If the current character is present in currently
+                considered Substring, then update Substring to start from
+                the next character of previous instance. */
                 else
                 {
-                    hs.Add(s[i]);
-                    if (++currentLength > longest)
-                    {
-                        longest = currentLength;
-                    }
+                    /* Also, when we are changing the Substring, we
+                    should also check whether length of the
+                    previous Substring was greater than max_len or
+                    not.*/
+                    if (currentLength > maxLength)
+                        maxLength = currentLength;
+
+                    currentLength = i - prevIndex;
                 }
+
+                // update the index of current character
+                visited[str[i]] = i;
             }
-            return longest;
+
+            // Compare the length of last Substring with max_len and
+            // update max_len if needed
+            if (currentLength > maxLength)
+                maxLength = currentLength;
+
+            return maxLength;
         }
 
         // Roman to Integer
