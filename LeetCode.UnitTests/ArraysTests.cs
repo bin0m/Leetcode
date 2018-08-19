@@ -149,5 +149,13 @@ namespace LeetCode.UnitTests
         {
             Assert.AreEqual(3, Arrays.SingleNumber(new[] { 1, 2, 1, 3, 2 }));
         }
+
+        [TestMethod]
+        public void SingleNumberTest5()
+        {
+            Assert.AreEqual(4, Arrays.SingleNumber(new[] { 4, 1, 2, 1, 3, 2, 3 }));
+        }
+
+
     }
 }
