@@ -156,6 +156,34 @@ namespace LeetCode.UnitTests
             Assert.AreEqual(4, Arrays.SingleNumber(new[] { 4, 1, 2, 1, 3, 2, 3 }));
         }
 
+        [TestMethod]
+        public void TwoSumTest1()
+        {
+            CollectionAssert.AreEqual(new []{0,1}, Arrays.TwoSum(new []{1,2}, 3));
+        }
 
+        [TestMethod]
+        public void TwoSumTest2()
+        {
+            CollectionAssert.AreEqual(new[] { -1, -1 }, Arrays.TwoSum(new[] { 1, 2 }, 2));
+        }
+
+        [TestMethod]
+        public void TwoSumTest3()
+        {
+            CollectionAssert.AreEqual(new[] { -1, -1 }, Arrays.TwoSum(new[] { 1, -3 }, 1));
+        }
+
+        [TestMethod]
+        public void TwoSumTest4()
+        {
+            CollectionAssert.AreEqual(new[] { 1, 2 }, Arrays.TwoSum(new[] { 1, -3, 2 }, -1));
+        }
+
+        [TestMethod]
+        public void TwoSumTest5()
+        { 
+            CollectionAssert.AreEqual(new[] { 0, 4 }, Arrays.TwoSum(new[] { 1, -3, 2, 4, 3}, 4));
+        }
     }
 }

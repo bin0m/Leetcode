@@ -181,12 +181,13 @@ namespace LeetCode
         public static int[] TwoSum(int[] nums, int target)
         {
             int size = nums.Length;
-            if (size == 2)
-            {
-                return new int[2] { 0, 1 };
-            }
-            int[] ans = new int[2];
 
+            int[] ans = {-1,-1};
+
+            if (size < 2)
+            {
+                return ans;
+            }
             //Naive solution: Brute force O(N^2)
             //for (int i = 0; i < size; i++)
             //{
