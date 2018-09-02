@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace LeetCode.UnitTests
@@ -184,6 +187,20 @@ namespace LeetCode.UnitTests
         public void TwoSumTest5()
         { 
             CollectionAssert.AreEqual(new[] { 0, 4 }, Arrays.TwoSum(new[] { 1, -3, 2, 4, 3}, 4));
+        }
+
+        [TestMethod]
+        public void FourSumTest1()
+        {
+            var result = Arrays.FourSum(new[] {0, 1, 2, 3}, 6);
+            CollectionAssert.AreEquivalent(new List<int> { 0, 1, 2, 3 }, new Collection<int>(result[0]));
+        }
+
+        [TestMethod]
+        public void FourSumTest2()
+        {
+            var result = Arrays.FourSum(new[] { -3, 0, 1, 2, 3, 4 }, 2);
+            CollectionAssert.AreEquivalent(new List<int> { -3, 0, 1, 4 }, new Collection<int>(result[0]));
         }
     }
 }
