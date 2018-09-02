@@ -135,6 +135,8 @@ namespace LeetCode
 
             Console.WriteLine($"result={DynamicProgramming.ClimbStairs(5)},expected=8");
 
+            Console.WriteLine($"result={Strings.LongestPalindrome("cbbd")},expected=cbbd");
+
             Console.ReadLine();
         }
     }

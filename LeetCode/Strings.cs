@@ -478,5 +478,49 @@ namespace LeetCode
             }
             return n;
         }
+
+        // Longest Palindromic Substring
+        // time: O(n^2 )
+        // space: O(n^2 )
+        public static string LongestPalindrome(string s)
+        {
+            int len = s.Length;
+            if(len <= 1)
+            {
+                return s;
+            }
+
+            bool[,] table = new bool[len, len];
+            table[len - 1, len - 1] = true;
+            int startOfMax = 0;
+            int max = 0;
+            for (int i = len - 2; i >= 0; i--)
+            {
+                for(int j = i; j < len; j++)
+                {
+                    if( i == j )
+                    {
+                        table[i, j] = true;
+                    }
+                    else if (i == j - 1)
+                    {
+                        table[i, j] = s[i] == s[j];
+                    }
+                    else
+                    {
+                        table[i, j] = table[i + 1, j - 1] && s[i] == s[j];     
+                    }
+
+                    if (table[i, j] && max < j - i + 1)
+                    {
+                        max = j - i + 1;
+                        startOfMax = i;
+                    }
+                }
+            }
+
+            return s.Substring(startOfMax, max);            
+        }
+
     }
 }
