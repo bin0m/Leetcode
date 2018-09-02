@@ -208,9 +208,10 @@ namespace LeetCode
             var dict = new Dictionary<int, int>();
             for (int i = 0; i < size; i++)
             {
-                if (dict.ContainsKey(target - nums[i]))
+                int complement = target - nums[i];
+                if (dict.TryGetValue(complement, out int complementIndex))
                 {
-                    ans[0] = dict[target - nums[i]];
+                    ans[0] = complementIndex;
                     ans[1] = i;
                     return ans;
                 }
